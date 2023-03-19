@@ -84,6 +84,13 @@ class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionView
         return imageView
     }()
     
+    private lazy var leftImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .orange
+        imageView.layer.cornerRadius = 10
+        return imageView
+    }()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -113,7 +120,8 @@ class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionView
         plusImageView,
         iconImageView,
         heartImageView,
-        heartIconImageView
+        heartIconImageView,
+        leftImageView
         ])
         
         backgroundImageView.snp.makeConstraints { make in
@@ -176,6 +184,13 @@ class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionView
             make.bottom.equalTo(heartImageView.snp.bottom).offset(-3)
             make.leading.equalTo(heartImageView.snp.leading).offset(3)
             make.trailing.equalTo(heartImageView.snp.trailing).offset(-3)
+        }
+        
+        leftImageView.snp.makeConstraints { make in
+            make.leading.equalTo(contentView.snp.leading).offset(6)
+            make.trailing.equalTo(discountLabel.snp.leading).offset(-100)
+            make.top.equalTo(contentView.snp.top).offset(6)
+            make.bottom.equalTo(categoryLabel.snp.top).offset(-75)
         }
     }
 }
