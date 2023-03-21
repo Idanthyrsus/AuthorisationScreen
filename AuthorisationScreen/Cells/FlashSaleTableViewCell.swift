@@ -44,7 +44,6 @@ class FlashSaleTableViewCell: UITableViewCell {
         fetchData()
     }
     
-    
     func setupUI() {
         contentView.addSubview(flashsaleCollection)
         flashsaleCollection.snp.makeConstraints { make in
@@ -59,8 +58,8 @@ class FlashSaleTableViewCell: UITableViewCell {
             self.viewModel.flashArray.value = flash.flashSale ?? []
         }.receive(on: RunLoop.main)
         .sink { _ in
-        } receiveValue: { _ in
-            self.flashsaleCollection.reloadData()
+        } receiveValue: { [weak self] _ in
+            self?.flashsaleCollection.reloadData()
         }
         .store(in: &cancellables)
     }

@@ -66,8 +66,8 @@ class LatestTableViewCell: UITableViewCell {
             self.viewModel.latestArray.value = latest.latest
         }.receive(on: RunLoop.main)
         .sink { _ in
-        } receiveValue: { _ in
-            self.latestCollection.reloadData()
+        } receiveValue: { [weak self] _ in
+            self?.latestCollection.reloadData()
         }
         .store(in: &cancellables)
     }
