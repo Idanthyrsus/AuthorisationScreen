@@ -37,11 +37,11 @@ class CustomButton: UIButton {
             self.setTitleColor(.init(white: 0, alpha: 0.8), for: .selected)
             self.setTitleColor(.init(white: -5, alpha: 0.8), for: .disabled)
             var descriptor = UIFontDescriptor(name: "Montserrat", size: 30)
-            descriptor = descriptor.addingAttributes([UIFontDescriptor.AttributeName.traits : [UIFontDescriptor.TraitKey.weight : UIFont.Weight.semibold]])
+            descriptor = descriptor.addingAttributes([UIFontDescriptor.AttributeName.traits : [UIFontDescriptor.TraitKey.weight : UIFont.Weight.bold]])
             self.titleLabel?.font = UIFont(descriptor: descriptor, size: 20)
             self.layer.cornerRadius = 18
             self.clipsToBounds = true
-            self.backgroundColor = UIColor(red: 73/255, green: 15/255, blue: 234/255, alpha: 1)
+            self.backgroundColor = UIColor(red: 80/255, green: 60/255, blue: 255/255, alpha: 1)
             
             // Switch between button types to get the appropriate title
             

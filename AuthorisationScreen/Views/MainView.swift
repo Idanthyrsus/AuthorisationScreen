@@ -61,12 +61,12 @@ class MainView: UIView {
     
     private lazy var profileImageView: UIImageView = {
         let picture = UIImageView()
-        picture.image = UIImage(named: "Indian programmer")
+        picture.image = UIImage(named: "Profile")
         picture.contentMode = .scaleAspectFill
         picture.clipsToBounds = true
         picture.layer.borderWidth = 1
         picture.layer.borderColor = UIColor.black.cgColor
-        picture.layer.cornerRadius = 18
+        picture.layer.cornerRadius = 17
         picture.layer.masksToBounds = true
         return picture
     }()
@@ -160,7 +160,6 @@ class MainView: UIView {
         }
         
         titleLabel.snp.makeConstraints { make in
-          //  make.centerX.equalToSuperview()
             make.top.equalTo(navigationView.snp.top).offset(60)
             make.leading.equalTo(leftImage.snp.trailing).offset(60)
             make.trailing.equalTo(profileImageView.snp.leading).offset(-42)
@@ -212,8 +211,8 @@ class MainView: UIView {
         iconImage.snp.makeConstraints { make in
             make.top.equalTo(searchbar.snp.top).offset(3)
             make.bottom.equalTo(searchbar.snp.bottom).offset(-3)
-            make.leading.equalTo(searchbar.snp.leading).offset(260)
-            make.trailing.equalTo(searchbar.snp.trailing).offset(-8)
+            make.leading.equalTo(searchbar.snp.leading).offset(257)
+            make.trailing.equalTo(searchbar.snp.trailing).offset(-14)
         }
     }
 }

@@ -49,7 +49,8 @@ class LatestTableViewCell: UITableViewCell {
         latestCollection.delegate = self
         latestCollection.dataSource = self
         setupUI()
-        fetchData()
+        fetchLatest()
+        
     }
     
     func setupUI() {
@@ -60,7 +61,7 @@ class LatestTableViewCell: UITableViewCell {
         }
     }
     
-    func fetchData() {
+    func fetchLatest() {
         let combined = Publishers.Zip(network.getLatest(), network.getFlash())
         combined.map { (latest, flash) in
             self.viewModel.latestArray.value = latest.latest

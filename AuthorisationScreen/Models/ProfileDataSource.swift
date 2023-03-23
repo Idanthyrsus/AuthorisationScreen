@@ -18,12 +18,11 @@ struct ProfileDataSource: Identifiable {
             case .pay:
                 return "creditcard"
             case .restore:
-                return "repeat.circle"
+                return "arrow.triangle.2.circlepath"
             case .help:
                 return "questionmark.circle"
             case .logout:
                 return "rectangle.portrait.and.arrow.right"
-                
             }
         }
     }

@@ -10,12 +10,12 @@ final class ProfileView: UIView {
 
    lazy var profileImageView: UIImageView = {
         let picture = UIImageView()
-        picture.image = UIImage(named: "Indian programmer")
+        picture.image = UIImage(named: "Profile")
         picture.contentMode = .scaleAspectFill
         picture.clipsToBounds = true
-        picture.layer.borderWidth = 3
-        picture.layer.borderColor = UIColor.white.cgColor
-        picture.layer.cornerRadius = 33.5
+        picture.layer.borderWidth = 2
+        picture.layer.borderColor = UIColor.lightGray.cgColor
+        picture.layer.cornerRadius = 32
         picture.layer.masksToBounds = true
         return picture
     }()
@@ -26,7 +26,7 @@ final class ProfileView: UIView {
         button.setTitleColor(.init(white: 0, alpha: 1.5), for: .selected)
         button.setTitle("Change photo", for: .normal)
         var descriptor = UIFontDescriptor(name: "Montserrat", size: 10)
-        descriptor = descriptor.addingAttributes([UIFontDescriptor.AttributeName.traits : [UIFontDescriptor.TraitKey.weight : UIFont.Weight.semibold]])
+        descriptor = descriptor.addingAttributes([UIFontDescriptor.AttributeName.traits : [UIFontDescriptor.TraitKey.weight : UIFont.Weight.bold]])
         button.titleLabel?.font = UIFont(descriptor: descriptor, size: 10)
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         button.setTitleColor(.gray, for: .normal)
@@ -42,7 +42,7 @@ final class ProfileView: UIView {
         return label
     }()
     
-    private lazy var uploadItemButton: CustomButton = {
+    lazy var uploadItemButton: CustomButton = {
         let button = CustomButton(buttonTitle: .upload)
         var configuration = CustomButton.Configuration.plain()
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 100)

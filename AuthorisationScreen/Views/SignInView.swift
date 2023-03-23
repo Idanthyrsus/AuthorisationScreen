@@ -79,6 +79,7 @@ final class SignInView: UIView, UITextFieldDelegate {
         label.attributedText = attributedString
         label.isSelectable = true
         label.isEditable = false
+        label.textAlignment = .left
         label.isScrollEnabled = false
         return label
     }()
@@ -92,6 +93,7 @@ final class SignInView: UIView, UITextFieldDelegate {
         label.attributedText = attributedString
         label.isSelectable = true
         label.isEditable = false
+        label.textAlignment = .left
         label.isScrollEnabled = false
         return label
     }()
@@ -173,21 +175,22 @@ final class SignInView: UIView, UITextFieldDelegate {
         
         appleSignInText.snp.makeConstraints { make in
             make.top.equalTo(googleSignInText.snp.bottom).offset(24)
-            make.centerX.equalToSuperview()
+            make.leading.equalTo(appleImage.snp.trailing).offset(14)
+            make.trailing.equalTo(self.snp.trailing).offset(-140)
         }
         
         googleImage.snp.makeConstraints { make in
-            make.top.equalTo(haveAnAccountTextView).offset(72)
-            make.leading.equalTo(self.snp.leading).offset(105)
-            make.trailing.equalTo(googleSignInText.snp.leading).offset(-12)
+            make.top.equalTo(haveAnAccountTextView).offset(66)
+            make.leading.equalTo(self.snp.leading).offset(102)
+            make.trailing.equalTo(googleSignInText.snp.leading).offset(-9)
             make.bottom.equalTo(self.snp.bottom).offset(-192)
         }
         
         appleImage.snp.makeConstraints { make in
-            make.top.equalTo(googleImage.snp.bottom).offset(28)
-            make.leading.equalTo(self.snp.leading).offset(105)
-            make.trailing.equalTo(appleSignInText.snp.leading).offset(-12)
-            make.bottom.equalTo(self.snp.bottom).offset(-132)
+            make.top.equalTo(googleImage.snp.bottom).offset(30)
+            make.leading.equalTo(self.snp.leading).offset(100)
+            make.width.equalTo(22)
+            make.bottom.equalTo(self.snp.bottom).offset(-134)
         }
     }
 }

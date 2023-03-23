@@ -133,11 +133,11 @@ class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionView
             make.top.equalTo(contentView.snp.top).offset(6)
             make.trailing.equalTo(contentView.snp.trailing).offset(-6)
             make.leading.equalTo(contentView.snp.leading).offset(125)
-            make.bottom.equalTo(contentView.snp.bottom).offset(-175)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-195)
         }
         
         categoryLabel.snp.makeConstraints { make in
-            make.top.equalTo(contentView.snp.top).offset(100)
+            make.top.equalTo(contentView.snp.top).offset(120)
             make.height.equalTo(25)
             make.leading.equalTo(contentView.snp.leading).offset(6)
             make.trailing.equalTo(contentView.snp.trailing).offset(-120)
@@ -145,21 +145,21 @@ class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionView
         }
         
         brandLabel.snp.makeConstraints { make in
-            make.bottom.equalTo(priceLabel.snp.top).offset(-20)
+            make.bottom.equalTo(priceLabel.snp.top).offset(-12)
             make.leading.equalTo(contentView.snp.leading).offset(12)
             make.trailing.equalTo(contentView.snp.trailing).offset(-82)
             make.top.equalTo(categoryLabel.snp.bottom).offset(6)
         }
         
         priceLabel.snp.makeConstraints { make in
-            make.bottom.equalTo(contentView.snp.bottom).offset(-6)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-10)
             make.leading.equalTo(contentView.snp.leading).offset(12)
             make.trailing.equalTo(contentView.snp.trailing).offset(-100)
-            make.top.equalTo(brandLabel.snp.bottom).offset(20)
+            make.top.equalTo(brandLabel.snp.bottom).offset(12)
         }
         
         plusImageView.snp.makeConstraints { make in
-            make.top.equalTo(contentView.snp.top).offset(160)
+            make.top.equalTo(contentView.snp.top).offset(180)
             make.trailing.equalTo(contentView.snp.trailing).offset(-6)
             make.leading.equalTo(priceLabel.snp.trailing).offset(60)
             make.bottom.equalTo(contentView.snp.bottom).offset(-6)
@@ -173,7 +173,7 @@ class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionView
         }
         
         heartImageView.snp.makeConstraints { make in
-            make.top.equalTo(contentView.snp.top).offset(170)
+            make.top.equalTo(contentView.snp.top).offset(190)
             make.trailing.equalTo(plusImageView.snp.leading).offset(-6)
             make.leading.equalTo(priceLabel.snp.trailing).offset(30)
             make.bottom.equalTo(contentView.snp.bottom).offset(-6)
@@ -190,7 +190,7 @@ class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionView
             make.leading.equalTo(contentView.snp.leading).offset(6)
             make.trailing.equalTo(discountLabel.snp.leading).offset(-100)
             make.top.equalTo(contentView.snp.top).offset(6)
-            make.bottom.equalTo(categoryLabel.snp.top).offset(-75)
+            make.bottom.equalTo(categoryLabel.snp.top).offset(-95)
         }
     }
 }

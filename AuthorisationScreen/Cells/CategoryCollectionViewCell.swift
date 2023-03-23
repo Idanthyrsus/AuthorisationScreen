@@ -69,10 +69,10 @@ class CategoryCollectionViewCell: UICollectionViewCell, CategoryCollectionCellPr
         }
         
         smallIconImageView.snp.makeConstraints { make in
-            make.top.equalTo(iconImage.snp.top).offset(6)
-            make.bottom.equalTo(iconImage.snp.bottom).offset(-6)
-            make.leading.equalTo(iconImage.snp.leading).offset(6)
-            make.trailing.equalTo(iconImage.snp.trailing).offset(-6)
+            make.top.equalTo(iconImage.snp.top).offset(8)
+            make.bottom.equalTo(iconImage.snp.bottom).offset(-8)
+            make.leading.equalTo(iconImage.snp.leading).offset(8)
+            make.trailing.equalTo(iconImage.snp.trailing).offset(-8)
         }
         
         categoryLabel.snp.makeConstraints { make in

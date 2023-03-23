@@ -53,6 +53,7 @@ class ProfileViewController: UIViewController, PickPhotoDelegate {
         profileView.delegate = self
         let leftButton = UIBarButtonItem(image: UIImage(systemName: Navigation.imageName.description) , style: .plain, target: self, action: #selector(goToSignIn))
         leftButton.tintColor = .black
+        profileView.uploadItemButton.addTarget(self, action: #selector(choosePicture), for: .touchUpInside)
         navigationItem.leftBarButtonItem = leftButton
     }
     
@@ -88,6 +89,10 @@ class ProfileViewController: UIViewController, PickPhotoDelegate {
         let viewController = SignInViewController()
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true)
+    }
+    
+    @objc func choosePicture() {
+        pickPhoto()
     }
 }
 

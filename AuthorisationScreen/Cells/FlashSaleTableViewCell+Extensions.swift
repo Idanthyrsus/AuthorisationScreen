@@ -25,6 +25,4 @@ extension FlashSaleTableViewCell: UICollectionViewDelegateFlowLayout, UICollecti
             cell.layer.cornerRadius = 12
        return cell
     }
-    
-    
 }

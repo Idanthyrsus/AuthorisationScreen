@@ -16,8 +16,6 @@ protocol NetworkService {
 
 final class NetworkServiceImpl: NetworkService {
     
-    var cancellables = Set<AnyCancellable>()
-    let viewModel = MainViewModel()
     func handleOutput(output: URLSession.DataTaskPublisher.Output) throws -> Data {
         guard let response = output.response as? HTTPURLResponse,
               response.statusCode >= 200 && response.statusCode < 300 else {

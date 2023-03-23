@@ -32,7 +32,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 165
         case 1:
-            return 205
+            return 225
         case 2:
             return 160
         default:

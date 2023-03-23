@@ -13,7 +13,7 @@ class CustomProfileCell: UITableViewCell, CustomProfileCellProtocol {
     
      lazy var iconImageView: UIImageView = {
         let iconImage = UIImageView()
-        iconImage.layer.cornerRadius = 24
+        iconImage.layer.cornerRadius = 21
         iconImage.backgroundColor = .systemGray5
         iconImage.contentMode = .scaleAspectFit
         iconImage.clipsToBounds = true
@@ -79,17 +79,17 @@ class CustomProfileCell: UITableViewCell, CustomProfileCellProtocol {
         iconImageView.addSubview(smallIconImageView)
         
         iconImageView.snp.makeConstraints { make in
-            make.top.equalTo(contentView.snp.top).offset(6)
-            make.bottom.equalTo(contentView.snp.bottom).offset(-6)
-            make.leading.equalTo(contentView.snp.leading).offset(3)
-            make.trailing.equalTo(contentView.snp.trailing).offset(-286)
+            make.top.equalTo(contentView.snp.top).offset(10)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-8)
+            make.leading.equalTo(contentView.snp.leading).offset(5)
+            make.trailing.equalTo(contentView.snp.trailing).offset(-290)
         }
         
         smallIconImageView.snp.makeConstraints { make in
-            make.top.equalTo(iconImageView.snp.top).offset(10)
-            make.bottom.equalTo(iconImageView.snp.bottom).offset(-10)
-            make.leading.equalTo(iconImageView.snp.leading).offset(12)
-            make.trailing.equalTo(iconImageView.snp.trailing).offset(-12)
+            make.top.equalTo(iconImageView.snp.top).offset(8)
+            make.bottom.equalTo(iconImageView.snp.bottom).offset(-8)
+            make.leading.equalTo(iconImageView.snp.leading).offset(7)
+            make.trailing.equalTo(iconImageView.snp.trailing).offset(-7)
         }
         
         categoryLabel.snp.makeConstraints { make in

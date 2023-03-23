@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class MainViewController: UIViewController  {
-    
+  
     let mainView = MainView()
     let customColor: UIColor = UIColor(red: 245/255, green: 245/255, blue: 255/255, alpha: 1)
     
@@ -27,14 +27,15 @@ class MainViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemPink
         self.view.addSubview(mainView)
         self.mainView.frame = self.view.bounds
         self.hideKeyboardWhenTappedAround()
         self.navigationController?.navigationBar.layer.zPosition = -1
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        self.tabBarController?.tabBar.frame = CGRect(x: 2, y: 762, width: self.view.frame.width-2, height: 95)
         setupTableView()
+       
     }
     
     func setupTableView() {
