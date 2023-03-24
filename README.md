@@ -21,3 +21,12 @@ You can test login with "Alex", "Anton" and "Jane". These names are already in l
 Действительный пароль должен содержать не менее 8 букв и 1 цифру без специальных символов.
 Пример действительного пароля: password1, logMeInn123.
 Вы можете проверить вход с помощью «Alex», «Anton» и «Jane». Эти имена уже есть в локальной базе данных.
+
+![Simulator Screen Shot - iPhone 14 - 2023-03-24 at 15 58 46](https://user-images.githubusercontent.com/105043706/227527755-866f26bd-3263-437e-a32d-ae483553bbbd.png)
+
+![Simulator Screen Shot - iPhone 14 - 2023-03-24 at 15 58 55](https://user-images.githubusercontent.com/105043706/227527782-cc2d2808-1632-4768-bdb3-1983689e90fd.png)
+
+![Simulator Screen Shot - iPhone 14 - 2023-03-24 at 15 59 17](https://user-images.githubusercontent.com/105043706/227527796-2e810672-3bcc-4907-9b4a-7cd777686d07.png)
+
+![Simulator Screen Shot - iPhone 14 - 2023-03-24 at 15 59 24](https://user-images.githubusercontent.com/105043706/227527810-6d508f65-74c3-4ffb-a51e-d8bdaee20501.png)
+
