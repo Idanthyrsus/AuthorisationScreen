@@ -11,10 +11,8 @@ import SnapKit
 import Combine
 
 class LatestTableViewCell: UITableViewCell {
-    let viewModel = MainViewModel()
-    let network: NetworkService = NetworkServiceImpl()
-    var cancellables = Set<AnyCancellable>()
-    
+
+    var models: [LatestElement] = []
     let customColor: UIColor = UIColor(red: 245/255, green: 245/255, blue: 255/255, alpha: 1)
     
     lazy var latestCollection: UICollectionView = {
@@ -49,8 +47,6 @@ class LatestTableViewCell: UITableViewCell {
         latestCollection.delegate = self
         latestCollection.dataSource = self
         setupUI()
-        fetchLatest()
-        
     }
     
     func setupUI() {
@@ -60,17 +56,10 @@ class LatestTableViewCell: UITableViewCell {
             make.leading.trailing.equalToSuperview()
         }
     }
-    
-    func fetchLatest() {
-        let combined = Publishers.Zip(network.getLatest(), network.getFlash())
-        combined.map { (latest, flash) in
-            self.viewModel.latestArray.value = latest.latest
-        }.receive(on: RunLoop.main)
-        .sink { _ in
-        } receiveValue: { [weak self] _ in
-            self?.latestCollection.reloadData()
-        }
-        .store(in: &cancellables)
+
+    func setup(models: [LatestElement]) {
+        self.models = models
+        latestCollection.reloadData()
     }
 }
 

@@ -12,12 +12,12 @@ struct Category: Hashable {
     let name, imageName: String
     
    static let categories: [Category] = [
-        .init(name: "Phones", imageName: "iphone.gen1"),
-        .init(name: "Headphones", imageName: "headphones"),
-        .init(name: "Games", imageName: "gamecontroller.fill"),
-        .init(name: "Cars", imageName: "car.side.fill"),
-        .init(name: "Furniture", imageName: "bed.double.fill"),
-        .init(name: "Kids", imageName: "teddybear.fill"),
+        .init(name: "Phones", imageName: "Phones"),
+        .init(name: "Headphones", imageName: "Headphones"),
+        .init(name: "Games", imageName: "Games"),
+        .init(name: "Cars", imageName: "Cars"),
+        .init(name: "Furniture", imageName: "Furniture"),
+        .init(name: "Kids", imageName: "Kids"),
     ]
 }
 

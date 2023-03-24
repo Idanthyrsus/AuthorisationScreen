@@ -43,6 +43,12 @@ class ProfileViewController: UIViewController, PickPhotoDelegate {
     let profileView = ProfileView()
     let viewModel = ProfileViewModel()
     
+    lazy var bottomView: UIView = {
+        let bottomView = UIView()
+        bottomView.backgroundColor = .white
+        return bottomView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = Navigation.profileName.description
@@ -55,6 +61,17 @@ class ProfileViewController: UIViewController, PickPhotoDelegate {
         leftButton.tintColor = .black
         profileView.uploadItemButton.addTarget(self, action: #selector(choosePicture), for: .touchUpInside)
         navigationItem.leftBarButtonItem = leftButton
+        setBottomView()
+    }
+    
+    
+    func setBottomView() {
+        self.view.addSubview(bottomView)
+        bottomView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(34)
+            make.bottom.equalTo(self.view.snp.bottom)
+        }
     }
     
     func pickPhoto() {

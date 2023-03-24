@@ -10,19 +10,21 @@ import UIKit
 
 extension FlashSaleTableViewCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.flashArray.value.count
+        return models.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-     
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlashsaleCollectionViewCell.reuseIdentifier, for: indexPath) as? FlashsaleCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            cell.apply(backgroundImage: viewModel.flashArray.value[indexPath.row].imageURL ?? "Unknown")
-            cell.apply(categoryLabel: viewModel.flashArray.value[indexPath.row].category ?? "Unknown" )
-            cell.apply(brandLabel: viewModel.flashArray.value[indexPath.row].name ?? "Unknown")
-            cell.apply(priceLabel: viewModel.flashArray.value[indexPath.row].price ?? 0)
-            cell.apply(discountLabel: viewModel.flashArray.value[indexPath.row].discount ?? 0)
-            cell.layer.cornerRadius = 12
-       return cell
+
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlashsaleCollectionViewCell.reuseIdentifier, for: indexPath) as? FlashsaleCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+
+        let model = models[indexPath.row]
+        cell.apply(backgroundImage: model.imageUrl ?? "Unknown")
+        cell.apply(categoryLabel: model.category ?? "Unknown" )
+        cell.apply(brandLabel: model.name ?? "Unknown")
+        cell.apply(priceLabel: model.price ?? 0)
+        cell.apply(discountLabel: model.discount ?? 0)
+        cell.layer.cornerRadius = 12
+        return cell
     }
 }

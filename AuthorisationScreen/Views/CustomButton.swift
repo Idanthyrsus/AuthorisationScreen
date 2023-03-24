@@ -10,6 +10,9 @@ import UIKit
 
 class CustomButton: UIButton {
         
+    let customBackroundColor = UIColor(red: 78/255, green: 85/255, blue: 215/255, alpha: 1)
+    let titleCustomColor = UIColor(red: 234/255, green: 234/255, blue: 234/255, alpha: 1)
+    
         enum ButtonTitles {
             case signIn
             case login
@@ -33,15 +36,15 @@ class CustomButton: UIButton {
             self.buttonTitle = buttonTitle
             super.init(frame: .zero)
             self.setTitleColor( .white, for: .normal)
-            self.setTitleColor(.init(white: 0, alpha: 0.8), for: .highlighted)
+            self.setTitleColor(.init(white: -5, alpha: 0.8), for: .highlighted)
             self.setTitleColor(.init(white: 0, alpha: 0.8), for: .selected)
-            self.setTitleColor(.init(white: -5, alpha: 0.8), for: .disabled)
+            self.setTitleColor(titleCustomColor, for: .disabled)
             var descriptor = UIFontDescriptor(name: "Montserrat", size: 30)
             descriptor = descriptor.addingAttributes([UIFontDescriptor.AttributeName.traits : [UIFontDescriptor.TraitKey.weight : UIFont.Weight.bold]])
             self.titleLabel?.font = UIFont(descriptor: descriptor, size: 20)
             self.layer.cornerRadius = 18
             self.clipsToBounds = true
-            self.backgroundColor = UIColor(red: 80/255, green: 60/255, blue: 255/255, alpha: 1)
+            self.backgroundColor = customBackroundColor
             
             // Switch between button types to get the appropriate title
             

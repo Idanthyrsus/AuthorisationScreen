@@ -29,7 +29,7 @@ class MainView: UIView {
     }
     
     let customColor: UIColor = UIColor(red: 245/255, green: 245/255, blue: 255/255, alpha: 1)
-    
+    let searchColor: UIColor = UIColor(red: 245/255, green: 246/255, blue: 246/255, alpha: 1)
     let viewModel = MainViewModel()
     
     private lazy var navigationView: UIView = {
@@ -61,7 +61,7 @@ class MainView: UIView {
     
     private lazy var profileImageView: UIImageView = {
         let picture = UIImageView()
-        picture.image = UIImage(named: "Profile")
+        picture.image = UIImage(named: "ProfileImage")
         picture.contentMode = .scaleAspectFill
         picture.clipsToBounds = true
         picture.layer.borderWidth = 1
@@ -82,9 +82,13 @@ class MainView: UIView {
     
     private lazy var searchbar: CustomTextfield = {
         let search = CustomTextfield(fieldType: .search)
-        search.backgroundColor = .systemGray5
+        search.backgroundColor = searchColor
+        let color = UIColor(red: 91/255, green: 91/255, blue: 91/255, alpha: 1)
+        let placeholder = search.placeholder ?? ""
+        search.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : color])
         search.layer.cornerRadius = 12
         search.textAlignment = .center
+        search.font = UIFont.systemFont(ofSize: 11)
         return search
     }()
     
@@ -210,8 +214,7 @@ class MainView: UIView {
         
         iconImage.snp.makeConstraints { make in
             make.top.equalTo(searchbar.snp.top).offset(3)
-            make.bottom.equalTo(searchbar.snp.bottom).offset(-3)
-            make.leading.equalTo(searchbar.snp.leading).offset(257)
+            make.height.equalTo(19)
             make.trailing.equalTo(searchbar.snp.trailing).offset(-14)
         }
     }

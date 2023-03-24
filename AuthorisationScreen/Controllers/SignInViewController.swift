@@ -13,7 +13,9 @@ final class SignInViewController: UIViewController, UITextFieldDelegate {
     let signInView = SignInView()
     let viewModel = SignInViewModel()
     var cancellables = Set<AnyCancellable>()
-    
+
+    var userService = UserService()
+
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var userDetails: [AccountDetails] = []
     
@@ -73,30 +75,18 @@ final class SignInViewController: UIViewController, UITextFieldDelegate {
         }) {
             AlertManager.showExistingUserAlert(on: self)
         } else {
-            storeUserDetails()
+            let newUser = userService.storeUserDetails(firstName: signInView.firstNameTextfield.text,
+                                                       lastName: signInView.lastNameTextfield.text,
+                                                       email: signInView.emailTextfield.text)
+            userDetails.append(newUser)
             showViewController()
         }
     }
     
-    func storeUserDetails() {
-        let newUser = AccountDetails(context: self.context)
-        newUser.firstName = signInView.firstNameTextfield.text
-        newUser.lastName = signInView.lastNameTextfield.text
-        newUser.email = signInView.emailTextfield.text
-        userDetails.append(newUser)
-        do {
-            try self.context.save()
-        } catch let error as NSError {
-            print("Error occured \(error)")
-        }
-    }
+
 
     func fetchUser() {
-        do {
-            self.userDetails = try context.fetch(AccountDetails.fetchRequest())
-        } catch let error as NSError {
-            print("Error occured \(error)")
-        }
+        self.userDetails = userService.fetchUsers()
     }
 
     func showViewController() {

@@ -10,7 +10,7 @@ final class ProfileView: UIView {
 
    lazy var profileImageView: UIImageView = {
         let picture = UIImageView()
-        picture.image = UIImage(named: "Profile")
+        picture.image = UIImage(named: "ProfileImage")
         picture.contentMode = .scaleAspectFill
         picture.clipsToBounds = true
         picture.layer.borderWidth = 2

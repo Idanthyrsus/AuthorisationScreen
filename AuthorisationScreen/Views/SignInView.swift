@@ -73,28 +73,16 @@ final class SignInView: UIView, UITextFieldDelegate {
     lazy var googleSignInText: UITextView = {
         let attributedString = NSMutableAttributedString(string: "Sign in with Google")
         attributedString.addAttribute(.link, value: "terms://termsAndConditions", range: (attributedString.string as NSString).range(of: "Sign in with Google"))
-        let label = UITextView()
-        label.linkTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        label.backgroundColor = .clear
+        let label = SignInView.customSignInTextView()
         label.attributedText = attributedString
-        label.isSelectable = true
-        label.isEditable = false
-        label.textAlignment = .left
-        label.isScrollEnabled = false
         return label
     }()
     
     lazy var appleSignInText: UITextView = {
         let attributedString = NSMutableAttributedString(string: "Sign in with Apple")
         attributedString.addAttribute(.link, value: "appleTerms://termsAndConditions", range: (attributedString.string as NSString).range(of: "Sign in with Apple"))
-        let label = UITextView()
-        label.linkTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        label.backgroundColor = .clear
+        let label = SignInView.customSignInTextView()
         label.attributedText = attributedString
-        label.isSelectable = true
-        label.isEditable = false
-        label.textAlignment = .left
-        label.isScrollEnabled = false
         return label
     }()
     
@@ -106,7 +94,7 @@ final class SignInView: UIView, UITextFieldDelegate {
     
     private lazy var appleImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "applelogo")
+        imageView.image = UIImage(named: "apple-logo")
         imageView.tintColor = .black
         return imageView
     }()
@@ -169,29 +157,42 @@ final class SignInView: UIView, UITextFieldDelegate {
         }
         
         googleSignInText.snp.makeConstraints { make in
-            make.top.equalTo(haveAnAccountTextView).offset(70)
+            make.top.equalTo(signInButton.snp.bottom).offset(107)
+            make.height.equalTo(22)
             make.centerX.equalToSuperview()
         }
         
         appleSignInText.snp.makeConstraints { make in
-            make.top.equalTo(googleSignInText.snp.bottom).offset(24)
-            make.leading.equalTo(appleImage.snp.trailing).offset(14)
-            make.trailing.equalTo(self.snp.trailing).offset(-140)
+            make.top.equalTo(googleSignInText.snp.bottom).offset(44)
+            make.leading.equalTo(self.snp.leading).offset(138)
+            make.width.equalTo(107)
+            make.height.equalTo(22)
         }
         
         googleImage.snp.makeConstraints { make in
-            make.top.equalTo(haveAnAccountTextView).offset(66)
-            make.leading.equalTo(self.snp.leading).offset(102)
             make.trailing.equalTo(googleSignInText.snp.leading).offset(-9)
-            make.bottom.equalTo(self.snp.bottom).offset(-192)
+            make.width.equalTo(23)
+            make.height.equalTo(24)
+            make.centerY.equalTo(googleSignInText)
         }
         
         appleImage.snp.makeConstraints { make in
-            make.top.equalTo(googleImage.snp.bottom).offset(30)
-            make.leading.equalTo(self.snp.leading).offset(100)
-            make.width.equalTo(22)
-            make.bottom.equalTo(self.snp.bottom).offset(-134)
+            make.width.equalTo(26.38)
+            make.height.equalTo(21.87)
+            make.centerY.equalTo(appleSignInText)
+            make.trailing.equalTo(appleSignInText.snp.leading).offset(-8)
         }
+    }
+
+    private static func customSignInTextView() -> UITextView {
+        let label = UITextView()
+        label.linkTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        label.backgroundColor = .clear
+        label.isSelectable = true
+        label.isEditable = false
+        label.textAlignment = .left
+        label.isScrollEnabled = false
+        return label
     }
 }
 

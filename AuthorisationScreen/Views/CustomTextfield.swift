@@ -5,6 +5,7 @@ import UIKit
 
 final class CustomTextfield: UITextField {
     
+    let customBackgroundColor = UIColor(red: 232/255, green: 232/255, blue: 232/255, alpha: 1)
     enum Placeholders {
         case firstName
         case lastName
@@ -34,7 +35,7 @@ final class CustomTextfield: UITextField {
         self.authorisationFieldType = fieldType
         super.init(frame: .zero)
         self.textAlignment = .center
-        self.backgroundColor = .systemGray5
+        self.backgroundColor = customBackgroundColor
         self.layer.cornerRadius = 16
         self.textColor = .systemGray
         self.returnKeyType = .done

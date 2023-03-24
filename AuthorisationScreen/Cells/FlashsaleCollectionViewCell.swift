@@ -6,6 +6,10 @@ import SDWebImage
 
 class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionViewCellProtocol {
     
+    let imageBackground = UIColor(red: 229/255, green: 233/255, blue: 239/255, alpha: 1)
+    let imageTint =  UIColor(red: 84/255, green: 85/255, blue: 137/255, alpha: 1)
+    let categoryLabelBackground = UIColor(red: 196/255, green: 196/255, blue: 196/255, alpha: 0.85)
+    
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
@@ -19,7 +23,7 @@ class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionView
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 10, weight: .semibold)
-        label.backgroundColor = UIColor(white: 8, alpha: 0.8)
+        label.backgroundColor = categoryLabelBackground
         label.textAlignment = .center
         label.layer.cornerRadius = 10
         label.clipsToBounds = true
@@ -56,14 +60,14 @@ class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionView
     
     private lazy var plusImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .systemGray5
+        imageView.backgroundColor = imageBackground
         imageView.layer.cornerRadius = 18
         return imageView
     }()
     
     private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.tintColor = .gray
+        imageView.tintColor = imageTint
         let config = UIImage.SymbolConfiguration(weight: .semibold)
         imageView.image = UIImage(systemName: "plus", withConfiguration: config)
         return imageView
@@ -71,22 +75,22 @@ class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionView
     
     private lazy var heartImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .systemGray5
-        imageView.layer.cornerRadius = 12
+        imageView.backgroundColor = imageBackground
+        imageView.layer.cornerRadius = 14
         return imageView
     }()
     
     private lazy var heartIconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.tintColor = .gray
-        let config = UIImage.SymbolConfiguration(weight: .heavy)
+        imageView.tintColor = imageTint
+        let config = UIImage.SymbolConfiguration(weight: .bold)
         imageView.image = UIImage(systemName: "heart", withConfiguration: config)
         return imageView
     }()
     
     private lazy var leftImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .orange
+        imageView.image = UIImage(named: "OrangePic")
         imageView.layer.cornerRadius = 10
         return imageView
     }()
@@ -173,17 +177,16 @@ class FlashsaleCollectionViewCell: UICollectionViewCell, FlashsaleCollectionView
         }
         
         heartImageView.snp.makeConstraints { make in
-            make.top.equalTo(contentView.snp.top).offset(190)
             make.trailing.equalTo(plusImageView.snp.leading).offset(-6)
-            make.leading.equalTo(priceLabel.snp.trailing).offset(30)
             make.bottom.equalTo(contentView.snp.bottom).offset(-6)
+            make.width.height.equalTo(28)
         }
         
         heartIconImageView.snp.makeConstraints { make in
-            make.top.equalTo(heartImageView.snp.top).offset(3)
-            make.bottom.equalTo(heartImageView.snp.bottom).offset(-3)
-            make.leading.equalTo(heartImageView.snp.leading).offset(3)
-            make.trailing.equalTo(heartImageView.snp.trailing).offset(-3)
+            make.top.equalTo(heartImageView.snp.top).offset(6)
+            make.bottom.equalTo(heartImageView.snp.bottom).offset(-6)
+            make.leading.equalTo(heartImageView.snp.leading).offset(5)
+            make.trailing.equalTo(heartImageView.snp.trailing).offset(-5)
         }
         
         leftImageView.snp.makeConstraints { make in

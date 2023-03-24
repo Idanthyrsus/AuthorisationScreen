@@ -3,7 +3,7 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
     
-    let symbolConfig = UIImage.SymbolConfiguration(pointSize: 13, weight: .heavy)
+    let symbolConfig = UIImage.SymbolConfiguration(pointSize: 12, weight: .heavy)
     
     enum TabBarProperties {
         case house
@@ -17,11 +17,11 @@ class TabBarViewController: UITabBarController {
             case .house:
                 return "house"
             case .heart:
-                return "heart"
+                return "HeartTab"
             case .cartImage:
                 return "cart"
             case .messageImage:
-                return "bubble.left"
+                return "MessageTab"
             case .person:
                 return "person"
             }
@@ -37,7 +37,7 @@ class TabBarViewController: UITabBarController {
     
     private lazy var favoriteViewController: UINavigationController = {
         let controller = UINavigationController(rootViewController: FavoriteViewController())
-        controller.tabBarItem.image = UIImage(systemName: TabBarProperties.heart.description, withConfiguration: self.symbolConfig)
+        controller.tabBarItem.image = UIImage(named: TabBarProperties.heart.description)
         controller.navigationBar.prefersLargeTitles = true
         controller.navigationBar.backgroundColor = .white
         return controller
@@ -53,7 +53,7 @@ class TabBarViewController: UITabBarController {
     
     private lazy var messagesViewController: UINavigationController = {
         let controller = UINavigationController(rootViewController: MessagesViewController())
-        controller.tabBarItem.image = UIImage(systemName: TabBarProperties.messageImage.description, withConfiguration: self.symbolConfig)
+        controller.tabBarItem.image = UIImage(named: TabBarProperties.messageImage.description)
         controller.navigationBar.prefersLargeTitles = true
         controller.navigationBar.backgroundColor = .white
         return controller
@@ -70,7 +70,6 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBarUI()
-      //  self.tabBar.frame = CGRect(x: 0, y: 0, width: 340, height: 100)
         setViewControllers([mainViewController,
                             favoriteViewController,
                             cartViewController,
@@ -87,9 +86,9 @@ class TabBarViewController: UITabBarController {
         // Setup your colors and corner radius
         self.tabBar.backgroundColor = .white
         self.tabBar.layer.cornerRadius = 24
-        self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-        self.tabBar.tintColor = .black
-        self.tabBar.unselectedItemTintColor = .systemGray6
+        self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        self.tabBar.tintColor = UIColor(red: 115/255, green: 114/255, blue: 151/255, alpha: 1)
+        self.tabBar.unselectedItemTintColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
         
         // Remove the line
         if #available(iOS 13.0, *) {

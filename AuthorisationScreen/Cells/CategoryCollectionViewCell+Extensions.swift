@@ -11,7 +11,7 @@ import UIKit
 extension CategoryCollectionViewCell {
     
     func apply(image: String) {
-        smallIconImageView.image = UIImage(systemName: image)
+        smallIconImageView.image = UIImage(named: image)
     }
     
     func applyLabel(text: String) {

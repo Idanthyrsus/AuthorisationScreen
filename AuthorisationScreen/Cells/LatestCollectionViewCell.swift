@@ -6,6 +6,10 @@ import SDWebImage
 
 class LatestCollectionViewCell: UICollectionViewCell, LatestCollectionViewCellProtocol {
     
+    let imageBackground = UIColor(red: 229/255, green: 233/255, blue: 239/255, alpha: 1)
+    let categoryLabelBackground = UIColor(red: 196/255, green: 196/255, blue: 196/255, alpha: 0.85)
+    let imageTint =  UIColor(red: 84/255, green: 85/255, blue: 137/255, alpha: 1)
+    
    lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
@@ -19,7 +23,7 @@ class LatestCollectionViewCell: UICollectionViewCell, LatestCollectionViewCellPr
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 8, weight: .medium)
-        label.backgroundColor = UIColor(white: 8, alpha: 0.8)
+        label.backgroundColor = categoryLabelBackground
         label.textAlignment = .center
         label.layer.cornerRadius = 10
         label.clipsToBounds = true
@@ -44,14 +48,14 @@ class LatestCollectionViewCell: UICollectionViewCell, LatestCollectionViewCellPr
     
     private lazy var plusImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .systemGray5
+        imageView.backgroundColor = imageBackground
         imageView.layer.cornerRadius = 12
         return imageView
     }()
     
     private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.tintColor = .gray
+        imageView.tintColor = imageTint
         imageView.image = UIImage(systemName: "plus")
         return imageView
     }()

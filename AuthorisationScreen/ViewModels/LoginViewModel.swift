@@ -11,7 +11,7 @@ class LoginViewModel: LoginViewModelProtocol {
         case none
     }
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var userService = UserService()
     var userDetails: [AccountDetails] = []
  
     @Published var firstName = ""
@@ -56,10 +56,6 @@ class LoginViewModel: LoginViewModelProtocol {
     }
     
     func fetchUser() {
-        do {
-            self.userDetails = try context.fetch(AccountDetails.fetchRequest())
-        } catch let error as NSError {
-            print("Error occured \(error)")
-        }
+        self.userDetails = userService.fetchUsers()
     }
 }

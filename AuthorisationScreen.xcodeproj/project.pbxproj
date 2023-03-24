@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3066086529CD9CB10055A7FA /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3066086429CD9CB10055A7FA /* UserService.swift */; };
 		9E19943C29C2E9E000F84EDA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19943B29C2E9E000F84EDA /* MainView.swift */; };
 		9E19943E29C30AFC00F84EDA /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19943D29C30AFC00F84EDA /* CategoryCollectionViewCell.swift */; };
 		9E19944029C30B7B00F84EDA /* CategoryCollectionCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19943F29C30B7B00F84EDA /* CategoryCollectionCellProtocol.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3066086429CD9CB10055A7FA /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9E19943B29C2E9E000F84EDA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9E19943D29C30AFC00F84EDA /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		9E19943F29C30B7B00F84EDA /* CategoryCollectionCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCellProtocol.swift; sourceTree = "<group>"; };
@@ -159,6 +161,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3066086329CD9C9E0055A7FA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3020729BC4FF500AC25CB /* AlertManager.swift */,
+				3066086429CD9CB10055A7FA /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9E19944E29C4303000F84EDA /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +248,7 @@
 		9EF5B0B129BB3F7C00C262C1 /* AuthorisationScreen */ = {
 			isa = PBXGroup;
 			children = (
+				3066086329CD9C9E0055A7FA /* Services */,
 				9EFCBA7129C5DFC500965ABC /* CoreData */,
 				9E19944E29C4303000F84EDA /* Network */,
 				9EE3021E29BC8D5500AC25CB /* Cells */,
@@ -268,7 +280,6 @@
 			children = (
 				9EF5B0B629BB3F7C00C262C1 /* SignInViewController.swift */,
 				9EF5B0D529BB774B00C262C1 /* LoginViewController.swift */,
-				9EE3020729BC4FF500AC25CB /* AlertManager.swift */,
 				9EE3020D29BC6BEB00AC25CB /* ProfileViewController.swift */,
 				9EE3020F29BC6E7200AC25CB /* TabBarViewController.swift */,
 				9EE3021129BC6F1A00AC25CB /* MainViewController.swift */,
@@ -442,6 +453,7 @@
 				9EF5B0B729BB3F7C00C262C1 /* SignInViewController.swift in Sources */,
 				9EFCBA7429C5DFDC00965ABC /* UserDetails.xcdatamodeld in Sources */,
 				9EE3021229BC6F1A00AC25CB /* MainViewController.swift in Sources */,
+				3066086529CD9CB10055A7FA /* UserService.swift in Sources */,
 				9EC018C329C742EE00CBF3D8 /* LatestTableViewCell+Extensions.swift in Sources */,
 				9EC018CB29C744BF00CBF3D8 /* FlashsaleCollectionViewCellProtocol.swift in Sources */,
 				9EC018C529C7435400CBF3D8 /* MainHeaderView+Extensions.swift in Sources */,

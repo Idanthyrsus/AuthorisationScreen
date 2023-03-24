@@ -12,11 +12,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: LatestTableViewCell.reuseIdentifier, for: indexPath) as? LatestTableViewCell else {
                 return UITableViewCell()
             }
+            cell.setup(models: viewModel.latestArray.value)
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FlashSaleTableViewCell.reuseIdentifier, for: indexPath) as? FlashSaleTableViewCell else {
                 return UITableViewCell()
             }
+            cell.setup(models: viewModel.flashArray.value)
             return cell
         default:
             return UITableViewCell()

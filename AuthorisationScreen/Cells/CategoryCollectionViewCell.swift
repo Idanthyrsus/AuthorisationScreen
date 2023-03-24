@@ -24,6 +24,7 @@ class CategoryCollectionViewCell: UICollectionViewCell, CategoryCollectionCellPr
     lazy var smallIconImageView: UIImageView = {
        let iconImage = UIImageView()
        iconImage.tintColor = .black
+        iconImage.contentMode = .scaleAspectFit
        return iconImage
    }()
     
@@ -69,10 +70,10 @@ class CategoryCollectionViewCell: UICollectionViewCell, CategoryCollectionCellPr
         }
         
         smallIconImageView.snp.makeConstraints { make in
-            make.top.equalTo(iconImage.snp.top).offset(8)
-            make.bottom.equalTo(iconImage.snp.bottom).offset(-8)
-            make.leading.equalTo(iconImage.snp.leading).offset(8)
-            make.trailing.equalTo(iconImage.snp.trailing).offset(-8)
+            make.top.equalTo(iconImage.snp.top).offset(10)
+            make.bottom.equalTo(iconImage.snp.bottom).offset(-10)
+            make.leading.equalTo(iconImage.snp.leading).offset(10)
+            make.trailing.equalTo(iconImage.snp.trailing).offset(-10)
         }
         
         categoryLabel.snp.makeConstraints { make in

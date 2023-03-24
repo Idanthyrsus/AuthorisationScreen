@@ -5,7 +5,7 @@ import UIKit
 extension CustomProfileCell {
     
     func apply(image: String) {
-        smallIconImageView.image = UIImage(systemName: image)
+        smallIconImageView.image = UIImage(named: image)
     }
 
     func apply(text: String) {

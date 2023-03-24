@@ -11,6 +11,8 @@ import SnapKit
 
 class CustomProfileCell: UITableViewCell, CustomProfileCellProtocol {
     
+    let contentBackground = UIColor(red: 245/255, green: 245/255, blue: 255/255, alpha: 1)
+    
      lazy var iconImageView: UIImageView = {
         let iconImage = UIImageView()
         iconImage.layer.cornerRadius = 21
@@ -64,7 +66,7 @@ class CustomProfileCell: UITableViewCell, CustomProfileCellProtocol {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 255/255, alpha: 1)
+        contentView.backgroundColor = contentBackground
         setupElements()
     }
     
@@ -80,16 +82,15 @@ class CustomProfileCell: UITableViewCell, CustomProfileCellProtocol {
         
         iconImageView.snp.makeConstraints { make in
             make.top.equalTo(contentView.snp.top).offset(10)
-            make.bottom.equalTo(contentView.snp.bottom).offset(-8)
-            make.leading.equalTo(contentView.snp.leading).offset(5)
-            make.trailing.equalTo(contentView.snp.trailing).offset(-290)
+            make.leading.equalTo(contentView.snp.leading)
+            make.width.height.equalTo(40)
         }
         
         smallIconImageView.snp.makeConstraints { make in
-            make.top.equalTo(iconImageView.snp.top).offset(8)
-            make.bottom.equalTo(iconImageView.snp.bottom).offset(-8)
-            make.leading.equalTo(iconImageView.snp.leading).offset(7)
-            make.trailing.equalTo(iconImageView.snp.trailing).offset(-7)
+            make.top.equalTo(iconImageView.snp.top)
+            make.bottom.equalTo(iconImageView.snp.bottom)
+            make.leading.equalTo(iconImageView.snp.leading)
+            make.trailing.equalTo(iconImageView.snp.trailing)
         }
         
         categoryLabel.snp.makeConstraints { make in

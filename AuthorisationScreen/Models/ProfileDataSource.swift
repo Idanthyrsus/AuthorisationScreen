@@ -16,13 +16,13 @@ struct ProfileDataSource: Identifiable {
         var description: String {
             switch self {
             case .pay:
-                return "creditcard"
+                return "Creditcard"
             case .restore:
-                return "arrow.triangle.2.circlepath"
+                return "Restore"
             case .help:
-                return "questionmark.circle"
+                return "Questionmark"
             case .logout:
-                return "rectangle.portrait.and.arrow.right"
+                return "Logout"
             }
         }
     }
