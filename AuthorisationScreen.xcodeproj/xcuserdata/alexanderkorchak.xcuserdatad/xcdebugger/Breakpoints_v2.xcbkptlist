@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "64E18049-74B3-4040-A770-D7A77D539E4C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C1FF3CF-99AB-4698-863D-46E3A585E8EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EffectiveMobileTest/Extensions/ProfileViewController+Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26FF630F-5753-46ED-A380-E451C9CD5576"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EffectiveMobileTest/Extensions/MainView+Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3587F48-E431-4819-8AD0-87E0B5A86CB9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EffectiveMobileTest/Controllers/SignInViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "SignInViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A3587F48-E431-4819-8AD0-87E0B5A86CB9 - d5981b0bc94b6c49"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EffectiveMobileTest.SignInViewController.userDetails.getter : Swift.Array&lt;EffectiveMobileTest.AccountDetails&gt;"
+                  moduleName = "EffectiveMobileTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexanderkorchak/Desktop/Effective%20Mobile%20Test/EffectiveMobileTest/EffectiveMobileTest/Controllers/SignInViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "A3587F48-E431-4819-8AD0-87E0B5A86CB9 - 509c99228da72c75"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EffectiveMobileTest.SignInViewController.userDetails.setter : Swift.Array&lt;EffectiveMobileTest.AccountDetails&gt;"
+                  moduleName = "EffectiveMobileTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexanderkorchak/Desktop/Effective%20Mobile%20Test/EffectiveMobileTest/EffectiveMobileTest/Controllers/SignInViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "A3587F48-E431-4819-8AD0-87E0B5A86CB9 - 5ac5ae2209958c4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EffectiveMobileTest.SignInViewController.userDetails.modify : Swift.Array&lt;EffectiveMobileTest.AccountDetails&gt;"
+                  moduleName = "EffectiveMobileTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexanderkorchak/Desktop/Effective%20Mobile%20Test/EffectiveMobileTest/EffectiveMobileTest/Controllers/SignInViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "A3587F48-E431-4819-8AD0-87E0B5A86CB9 - ffcfd12213022877"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EffectiveMobileTest.SignInViewController.userDetails.modify : Swift.Array&lt;EffectiveMobileTest.AccountDetails&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "EffectiveMobileTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexanderkorchak/Desktop/Effective%20Mobile%20Test/EffectiveMobileTest/EffectiveMobileTest/Controllers/SignInViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "A3587F48-E431-4819-8AD0-87E0B5A86CB9 - 726bcff0a6a7504a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EffectiveMobileTest.SignInViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; EffectiveMobileTest.SignInViewController"
+                  moduleName = "EffectiveMobileTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexanderkorchak/Desktop/Effective%20Mobile%20Test/EffectiveMobileTest/EffectiveMobileTest/Controllers/SignInViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "A3587F48-E431-4819-8AD0-87E0B5A86CB9 - a7854ee6375e4108"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EffectiveMobileTest.SignInViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;EffectiveMobileTest.SignInViewController&gt;"
+                  moduleName = "EffectiveMobileTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexanderkorchak/Desktop/Effective%20Mobile%20Test/EffectiveMobileTest/EffectiveMobileTest/Controllers/SignInViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "440">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
