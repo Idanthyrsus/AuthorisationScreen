@@ -69,10 +69,7 @@ final class SignInViewController: UIViewController, UITextFieldDelegate {
           }
 
         fetchUser()
-        if userDetails.contains(where: { $0.firstName == signInView.firstNameTextfield.text &&
-                                         $0.lastName == signInView.lastNameTextfield.text &&
-                                         $0.email == signInView.emailTextfield.text
-        }) {
+        if viewModel.userHasAnAccount(with: userDetails) {
             AlertManager.showExistingUserAlert(on: self)
         } else {
             let newUser = userService.storeUserDetails(firstName: signInView.firstNameTextfield.text,
