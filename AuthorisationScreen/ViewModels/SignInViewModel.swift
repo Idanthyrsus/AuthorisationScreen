@@ -30,10 +30,4 @@ final class SignInViewModel: SignInViewModelProtocol {
     private func checkData() {
         signInButtonPublisher.send(firstName.count != 0 && lastName.count != 0 && email.count != 0)
     }
-    
-    func userHasAnAccount(with userDetails: [AccountDetails]) -> Bool {
-        return userDetails.contains(where: { ($0.firstName == signInView.firstNameTextfield.text) &&
-            ($0.lastName == signInView.lastNameTextfield.text) &&
-            ($0.email == signInView.emailTextfield.text) })
-    }
 }
