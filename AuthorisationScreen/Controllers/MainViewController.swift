@@ -12,7 +12,6 @@ import Combine
 class MainViewController: UIViewController  {
   
     let mainView = MainView()
-    let customColor: UIColor = UIColor(red: 245/255, green: 245/255, blue: 255/255, alpha: 1)
 
     let viewModel = MainViewModel()
 
@@ -28,7 +27,7 @@ class MainViewController: UIViewController  {
          table.register(LatestTableViewCell.self, forCellReuseIdentifier: LatestTableViewCell.reuseIdentifier)
          table.register(FlashSaleTableViewCell.self, forCellReuseIdentifier: FlashSaleTableViewCell.reuseIdentifier)
          table.register(MainHeaderView.self, forHeaderFooterViewReuseIdentifier: MainHeaderView.reuseIdentifier)
-         table.backgroundColor = customColor
+        table.backgroundColor = UIColor.theme.background
          return table
      }()
     
@@ -51,7 +50,7 @@ class MainViewController: UIViewController  {
             for controller in array! {
                 controller.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -5, right: 0)
             }
-        self.tabBarController?.tabBar.frame = CGRect(x: 1.2, y: 748, width: self.view.frame.width-3.5, height: 63)
+        self.tabBarController?.tabBar.frame = CGRect(x: 1.2, y: view.frame.height-97, width: self.view.frame.width-3.5, height: 63)
         setupTableView()
         setBottomView()
         getData()

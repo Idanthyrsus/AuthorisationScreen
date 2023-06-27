@@ -28,13 +28,27 @@ class TabBarViewController: UITabBarController {
         }
     }
     
+//    private func createNavigationController(with rootViewController: UIViewController,
+//                                            image: String,
+//                                            imageConfiguration: UIImage.SymbolConfiguration?,
+//                                            isLargeTitle: Bool,
+//                                            backgroundColor: UIColor) -> UINavigationController {
+//
+//        let controller = UINavigationController(rootViewController: rootViewController)
+//        controller.tabBarItem.image = UIImage(systemName: image, withConfiguration: imageConfiguration)
+//        controller.navigationBar.prefersLargeTitles = isLargeTitle
+//        controller.navigationBar.backgroundColor = backgroundColor
+//        return controller
+//    }
+    
     private lazy var mainViewController: UINavigationController = {
         let controller = UINavigationController(rootViewController: MainViewController())
-        controller.tabBarItem.image = UIImage(systemName: TabBarProperties.house.description, withConfiguration: self.symbolConfig)
+        controller.tabBarItem.image = UIImage(systemName: TabBarProperties.house.description, withConfiguration: symbolConfig)
+        controller.navigationBar.prefersLargeTitles = true
         controller.navigationBar.backgroundColor = .white
         return controller
     }()
-    
+ 
     private lazy var favoriteViewController: UINavigationController = {
         let controller = UINavigationController(rootViewController: FavoriteViewController())
         controller.tabBarItem.image = UIImage(named: TabBarProperties.heart.description)
@@ -63,15 +77,17 @@ class TabBarViewController: UITabBarController {
         let controller = UINavigationController(rootViewController: ProfileViewController())
         controller.tabBarItem.image = UIImage(systemName: TabBarProperties.person.description, withConfiguration: self.symbolConfig)
         controller.navigationBar.prefersLargeTitles = false
-        controller.navigationBar.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 255/255, alpha: 1)
+        controller.navigationBar.backgroundColor = UIColor.theme.background
         return controller
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBarUI()
-        setViewControllers([mainViewController,
-                            favoriteViewController,
+        setViewControllers([
+         mainViewController,
+         favoriteViewController,
+            
                             cartViewController,
                             messagesViewController,
                             profileViewController],

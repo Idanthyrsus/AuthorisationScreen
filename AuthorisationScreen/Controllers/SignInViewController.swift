@@ -64,7 +64,7 @@ final class SignInViewController: UIViewController, UITextFieldDelegate {
 
         fetchUser()
   
-        if viewModel.userHasAnAccount(with: userDetails) {
+        if userHasAnAccount(with: userDetails) {
             AlertManager.showExistingUserAlert(on: self)
         } else {
             let newUser = userService.storeUserDetails(firstName: signInView.firstNameTextfield.text,
@@ -83,6 +83,12 @@ final class SignInViewController: UIViewController, UITextFieldDelegate {
         let viewController = TabBarViewController()
         viewController.modalPresentationStyle = .fullScreen
         present(viewController, animated: true)
+    }
+    
+    func userHasAnAccount(with userDetails: [AccountDetails]) -> Bool {
+        return userDetails.contains(where: { ($0.firstName == signInView.firstNameTextfield.text) &&
+            ($0.lastName == signInView.lastNameTextfield.text) &&
+            ($0.email == signInView.emailTextfield.text) })
     }
 }
 

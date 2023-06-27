@@ -13,7 +13,7 @@ final class SignInView: UIView, UITextFieldDelegate {
   
     private lazy var signInLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        
         label.textAlignment = .center
         label.text = "Sign in"
         var descriptor = UIFontDescriptor(name: "Montserrat", size: 30)
@@ -72,7 +72,9 @@ final class SignInView: UIView, UITextFieldDelegate {
     
     lazy var googleSignInText: UITextView = {
         let attributedString = NSMutableAttributedString(string: "Sign in with Google")
-        attributedString.addAttribute(.link, value: "terms://termsAndConditions", range: (attributedString.string as NSString).range(of: "Sign in with Google"))
+        attributedString.addAttribute(.link,
+                                      value: "terms://termsAndConditions",
+                                      range: (attributedString.string as NSString).range(of: "Sign in with Google"))
         let label = SignInView.customSignInTextView()
         label.attributedText = attributedString
         return label
@@ -80,7 +82,9 @@ final class SignInView: UIView, UITextFieldDelegate {
     
     lazy var appleSignInText: UITextView = {
         let attributedString = NSMutableAttributedString(string: "Sign in with Apple")
-        attributedString.addAttribute(.link, value: "appleTerms://termsAndConditions", range: (attributedString.string as NSString).range(of: "Sign in with Apple"))
+        attributedString.addAttribute(.link,
+                                      value: "appleTerms://termsAndConditions",
+                                      range: (attributedString.string as NSString).range(of: "Sign in with Apple"))
         let label = SignInView.customSignInTextView()
         label.attributedText = attributedString
         return label
@@ -95,7 +99,6 @@ final class SignInView: UIView, UITextFieldDelegate {
     private lazy var appleImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "apple-logo")
-        imageView.tintColor = .black
         return imageView
     }()
     
@@ -110,7 +113,7 @@ final class SignInView: UIView, UITextFieldDelegate {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 255/255, alpha: 1)
+        self.backgroundColor = UIColor.theme.background
     }
     
     // MARK: - Add subviews

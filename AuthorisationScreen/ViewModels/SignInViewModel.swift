@@ -2,16 +2,16 @@ import Foundation
 import Combine
 import UIKit
 
-
 final class SignInViewModel: SignInViewModelProtocol {
-  
+    
     private var firstName: String = ""
     private var lastName: String = ""
     private var email: String = ""
-   
+    
     let signInView = SignInView()
     let signInButtonPublisher = PassthroughSubject<Bool, Never>()
     let checkUserPublisher = PassthroughSubject<Bool, Error>()
+    
     func updateFirst(name: String) {
         firstName = name
         checkData()
@@ -32,8 +32,8 @@ final class SignInViewModel: SignInViewModelProtocol {
     }
     
     func userHasAnAccount(with userDetails: [AccountDetails]) -> Bool {
-     return  userDetails.contains(where: { $0.firstName == signInView.firstNameTextfield.text &&
-            $0.lastName == signInView.lastNameTextfield.text &&
-            $0.email == signInView.emailTextfield.text})
+        return userDetails.contains(where: { ($0.firstName == signInView.firstNameTextfield.text) &&
+            ($0.lastName == signInView.lastNameTextfield.text) &&
+            ($0.email == signInView.emailTextfield.text) })
     }
 }

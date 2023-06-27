@@ -18,10 +18,6 @@ final class LoginView: UIView, UITextFieldDelegate {
         }
     }
     
-    let customBackgroundColor = UIColor(red: 232/255, green: 232/255, blue: 232/255, alpha: 1)
-    
-    let customColor = UIColor(red: 245/255, green: 245/255, blue: 255/255, alpha: 1)
-    
     lazy var welcomeBackLabel: UILabel = {
         let label = UILabel()
         label.text = "Welcome back"
@@ -58,7 +54,7 @@ final class LoginView: UIView, UITextFieldDelegate {
         textfield.autocorrectionType = .no
         textfield.textColor = .black
         textfield.placeholder = "Password"
-        textfield.backgroundColor = customBackgroundColor
+        textfield.backgroundColor = UIColor.theme.textfieldBackground
         textfield.layer.cornerRadius = 16
         textfield.isSecureTextEntry = true
         textfield.delegate = self
@@ -135,7 +131,7 @@ final class LoginView: UIView, UITextFieldDelegate {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = customColor
+        self.backgroundColor = UIColor.theme.background
     }
     
     required init?(coder: NSCoder) {

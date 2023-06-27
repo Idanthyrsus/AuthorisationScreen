@@ -27,14 +27,12 @@ class MainView: UIView {
             }
         }
     }
-    
-    let customColor: UIColor = UIColor(red: 245/255, green: 245/255, blue: 255/255, alpha: 1)
-    let searchColor: UIColor = UIColor(red: 245/255, green: 246/255, blue: 246/255, alpha: 1)
+
     let viewModel = MainViewModel()
     
     private lazy var navigationView: UIView = {
         let navigation = UIView()
-        navigation.backgroundColor = customColor
+        navigation.backgroundColor = UIColor.theme.background
         return navigation
     }()
     
@@ -82,7 +80,7 @@ class MainView: UIView {
     
     private lazy var searchbar: CustomTextfield = {
         let search = CustomTextfield(fieldType: .search)
-        search.backgroundColor = searchColor
+        search.backgroundColor = UIColor.theme.searchBarBackground
         let color = UIColor(red: 91/255, green: 91/255, blue: 91/255, alpha: 1)
         let placeholder = search.placeholder ?? ""
         search.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : color])
@@ -116,7 +114,7 @@ class MainView: UIView {
         layout.sectionInset = UIEdgeInsets(top: 2, left: 6, bottom: 2, right: 6)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier)
-        collection.backgroundColor = customColor
+        collection.backgroundColor = UIColor.theme.background
         collection.isScrollEnabled = true
         collection.showsHorizontalScrollIndicator = false
 

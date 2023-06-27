@@ -21,6 +21,7 @@
 		9E19945729C433CE00F84EDA /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9E19945629C433CE00F84EDA /* SDWebImage */; };
 		9E19945929C445BF00F84EDA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19945829C445BF00F84EDA /* MainViewModel.swift */; };
 		9E19945B29C4847C00F84EDA /* FlashsaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19945A29C4847C00F84EDA /* FlashsaleCollectionViewCell.swift */; };
+		9E97676A2A4AE60B00399684 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9767692A4AE60B00399684 /* UIColor+Extensions.swift */; };
 		9EA7AFEB29C6FA44005BC492 /* MainViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7AFEA29C6FA44005BC492 /* MainViewController+Extensions.swift */; };
 		9EC018B929C702C500CBF3D8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC018B829C702C500CBF3D8 /* WebViewController.swift */; };
 		9EC018BB29C7273800CBF3D8 /* SignInViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC018BA29C7273800CBF3D8 /* SignInViewModelProtocol.swift */; };
@@ -91,6 +92,7 @@
 		9E19945329C430D600F84EDA /* FlashsaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashsaleModel.swift; sourceTree = "<group>"; };
 		9E19945829C445BF00F84EDA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9E19945A29C4847C00F84EDA /* FlashsaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashsaleCollectionViewCell.swift; sourceTree = "<group>"; };
+		9E9767692A4AE60B00399684 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9EA7AFEA29C6FA44005BC492 /* MainViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Extensions.swift"; sourceTree = "<group>"; };
 		9EC018B829C702C500CBF3D8 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		9EC018BA29C7273800CBF3D8 /* SignInViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				9E19944129C30C8200F84EDA /* CustomProfileCell+Extensions.swift */,
 				9E19944629C323BF00F84EDA /* MainView+Extensions.swift */,
 				9EA7AFEA29C6FA44005BC492 /* MainViewController+Extensions.swift */,
+				9E9767692A4AE60B00399684 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				9E19945929C445BF00F84EDA /* MainViewModel.swift in Sources */,
 				9EC018B929C702C500CBF3D8 /* WebViewController.swift in Sources */,
 				9EF5B0D629BB774B00C262C1 /* LoginViewController.swift in Sources */,
+				9E97676A2A4AE60B00399684 /* UIColor+Extensions.swift in Sources */,
 				9E19945029C4303D00F84EDA /* NetworkService.swift in Sources */,
 				9EE678E729C222A0000B380A /* LoginViewModel.swift in Sources */,
 				9EE3020429BC382F00AC25CB /* UIView+Extensions.swift in Sources */,

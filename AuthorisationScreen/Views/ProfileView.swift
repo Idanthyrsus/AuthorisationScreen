@@ -6,7 +6,6 @@ final class ProfileView: UIView {
     
     var imagePicker = UIImagePickerController()
     var delegate: PickPhotoDelegate?
-    let customColor: UIColor = UIColor(red: 245/255, green: 245/255, blue: 255/255, alpha: 1)
 
    lazy var profileImageView: UIImageView = {
         let picture = UIImageView()
@@ -66,7 +65,7 @@ final class ProfileView: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.separatorStyle = .none
-        tableView.backgroundColor = customColor
+        tableView.backgroundColor = UIColor.theme.background
         tableView.showsVerticalScrollIndicator = false
         tableView.register(CustomProfileCell.self, forCellReuseIdentifier: CustomProfileCell.reuseIdentifier)
         return tableView
@@ -83,7 +82,7 @@ final class ProfileView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = customColor
+        self.backgroundColor = UIColor.theme.background
     }
     
     @objc func didTapButton() {
