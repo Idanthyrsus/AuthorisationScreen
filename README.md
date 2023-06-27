@@ -41,19 +41,7 @@ You can test login with "Alex" and "password1". This name is already in local da
 
 Вы можете проверить вход с помощью «Alex». Это имя уже есть в локальной базе данных.
 
-<img width="150" alt="Screenshot 2023-03-30 at 18 04 41" src="https://user-images.githubusercontent.com/105043706/228880922-8c300c07-20f7-4643-9a1a-9bfeca406969.png">
-
-<img width="150" alt="Screenshot 2023-03-30 at 18 04 53" src="https://user-images.githubusercontent.com/105043706/228880936-5c2a578e-6bcc-4ede-aa39-98b8d61e08dd.png">
-
-<img width="150" alt="Screenshot 2023-03-30 at 18 05 10" src="https://user-images.githubusercontent.com/105043706/228880968-eb5b8a9f-e6a8-4663-bd45-bb5098a1d290.png">
-
-<img width="150" alt="Screenshot 2023-03-30 at 18 05 29" src="https://user-images.githubusercontent.com/105043706/228881006-3ab002fc-e36a-45f5-bf04-9bec295f9423.png">
-
-<img width="150" alt="Screenshot 2023-03-30 at 18 05 39" src="https://user-images.githubusercontent.com/105043706/228881040-5476b0ff-4152-49e3-bd0e-af98d49a2ede.png">
-
-<img width="150" alt="Screenshot 2023-03-30 at 18 05 45" src="https://user-images.githubusercontent.com/105043706/228881072-abac8b5e-7895-4373-a2ff-51213025e6fc.png">
-
-<img width="150" alt="Screenshot 2023-03-30 at 18 06 04" src="https://user-images.githubusercontent.com/105043706/228881102-61c50969-796d-4228-bfcd-19b90c4fa420.png">
+<img width="150" alt="Screenshot 2023-03-30 at 18 04 41" src="https://user-images.githubusercontent.com/105043706/228880922-8c300c07-20f7-4643-9a1a-9bfeca406969.png"> <img width="150" alt="Screenshot 2023-03-30 at 18 04 53" src="https://user-images.githubusercontent.com/105043706/228880936-5c2a578e-6bcc-4ede-aa39-98b8d61e08dd.png"> <img width="150" alt="Screenshot 2023-03-30 at 18 05 10" src="https://user-images.githubusercontent.com/105043706/228880968-eb5b8a9f-e6a8-4663-bd45-bb5098a1d290.png"> <img width="150" alt="Screenshot 2023-03-30 at 18 05 29" src="https://user-images.githubusercontent.com/105043706/228881006-3ab002fc-e36a-45f5-bf04-9bec295f9423.png"> <img width="150" alt="Screenshot 2023-03-30 at 18 05 39" src="https://user-images.githubusercontent.com/105043706/228881040-5476b0ff-4152-49e3-bd0e-af98d49a2ede.png"> <img width="150" alt="Screenshot 2023-03-30 at 18 05 45" src="https://user-images.githubusercontent.com/105043706/228881072-abac8b5e-7895-4373-a2ff-51213025e6fc.png"> <img width="150" alt="Screenshot 2023-03-30 at 18 06 04" src="https://user-images.githubusercontent.com/105043706/228881102-61c50969-796d-4228-bfcd-19b90c4fa420.png">
 
 
 
