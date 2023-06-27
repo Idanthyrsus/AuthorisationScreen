@@ -18,7 +18,7 @@ Valid password must contain at least 8 letters and 1 number without special symb
 
 Example of a valid password: password1, logMeInn123.
 
-You can test login with "Alex", "Anton" and "Jane". These names are already in local database.
+You can test login with "Alex" and "password1". This name is already in local database.
 
 В версии UIKit функции Sign in и Login реализованы с использованием локального хранилища (CoreData).
 
